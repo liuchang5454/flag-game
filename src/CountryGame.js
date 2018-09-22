@@ -54,13 +54,19 @@ class CountryGame extends Component {
 
   _getOptions(correctOption, countries) {
     let options = [correctOption];
-    let tries = 0;
-    while (options.length < 4 && tries < 15) {
+    // let tries = 0;
+    // while (options.length < 4 && tries < 15) {
+    //   let option = Math.floor(Math.random() * countries.length);
+    //   if (options.indexOf(option) === -1 ) {
+    //     options.push(option);
+    //   } else {
+    //     tries++;
+    //   }
+    // }
+    while (options.length < 4) {
       let option = Math.floor(Math.random() * countries.length);
       if (options.indexOf(option) === -1 ) {
         options.push(option);
-      } else {
-        tries++;
       }
     }
     return shuffle(options);
